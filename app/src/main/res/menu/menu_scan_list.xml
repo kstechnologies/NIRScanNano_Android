@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".ScanListActivity">
+
+    <item android:id="@+id/action_info" android:title="@string/action_info"
+        android:icon="@drawable/ic_action_info" android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:icon="@drawable/ic_action_settings" android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_scan" android:title="@string/action_scan"
+        android:icon="@drawable/ic_connect" android:showAsAction="always" />
+</menu>

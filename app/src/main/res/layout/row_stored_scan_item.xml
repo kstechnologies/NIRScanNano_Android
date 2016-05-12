@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_scan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip8"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="Column1" />
+
+    <TextView
+        android:id="@+id/tv_scan_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_scan_name"
+        tools:text="Wednesday, 2/24/16 at 15:47:08" />
+
+    <TextView
+        android:id="@+id/tv_scan_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_scan_date" />
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kstechnologies.NanoScan.GraphActivity">
+    <!-- <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never" /> -->
+
+    <item android:id="@+id/action_email" android:title="@string/action_scan"
+        android:icon="@drawable/ic_mail" android:showAsAction="always" />
+</menu>

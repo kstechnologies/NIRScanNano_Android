@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_10221d077a476ddbdff17841ce484e13a62f4423/classes.dex" />
+    </item>
+    <item
+        jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6cad10afb9b62bec62962e9553ef808467ff705f">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_94271aef635032b41609a463c61cab635c305694/classes.dex" />
+    </item>
+    <item
+        jar="/Users/collinmast/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_4a557bced028ee916ad02f2ec826c98debf10c81/classes.dex" />
+    </item>
+    <item
+        jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/exploded-aar/nirscannanolibrary/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="52dd943c1b17caf5fcd68a1ee428dfd1eaa7c797">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-nirscannanolibrary_58d8e1cce01d700fd3769a2a50992dc49e323dca/classes.dex" />
+    </item>
+    <item
+        jar="/Users/collinmast/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.6/6771ad5c09e78ee0ac49b86672c0125945b7f978/opencsv-3.6.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6771ad5c09e78ee0ac49b86672c0125945b7f978">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/opencsv-3.6_8db29c76233caedb954bf1aff20c729a834d6e35/classes.dex" />
+    </item>
+    <item
+        jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_17a2bda8c6a853cfa59ac206102154abc2593e1c/classes.dex" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-lang3-3.3.2_f921ad88f40c21184578d474913a9546d8a3f150/classes.dex" />
+    </item>
+    <item
+        jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f62cebfe7e1a0b8229df5b429d2da35db1c6d7c7">
+        <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1b51bf0b99cfc677b8bb15858c970b1dd68b5034/classes.dex" />
+    </item>
+
+</items>

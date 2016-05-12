@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kstechnologies.NanoScan">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.kstechnologies.NanoScan.ScanListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kstechnologies.NanoScan.InfoActivity"
+            android:label="@string/title_activity_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.GraphActivity"
+            android:label="@string/title_activity_graph"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name="com.kstechnologies.NanoScan.NanoBLEService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.kstechnologies.NanoScan.NewScanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.ConfigureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.DeviceInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.DeviceStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.ScanConfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kstechnologies.NanoScan.StoredScanDataActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.kstechnologies.NanoScan.ScanActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

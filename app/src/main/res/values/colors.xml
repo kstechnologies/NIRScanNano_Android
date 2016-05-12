@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="active_conf">#00AA00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="kst_red">#d9351f</color>
+    <color name="gray">#323232</color>
+    <color name="btn_unavailable">#888888</color>
+</resources>

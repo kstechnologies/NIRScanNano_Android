@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">NIRScan Nano</string>
+
+    <string name="action_info">Info</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_scan">Scan</string>
+
+    <string name="search_hint">Search</string>
+    <string name="title_activity_info">More Information</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <string-array name="info_title_array">
+        <item>TI DLP Website</item>
+        <item>KST DLP Website</item>
+        <item>Purchase a NIRScan Nano</item>
+        <item>Support Forums</item>
+    </string-array>
+
+    <string-array name="info_body_array">
+        <item>Learn how TI is revolutionizing mobile spectroscopy</item>
+        <item>Learn about KST, TI\'s Strategic Design Partner</item>
+        <item>Learn how to buy your own Evaluation Module</item>
+        <item>Go deep with TI\'s E2E Technical Support Forums</item>
+    </string-array>
+
+    <string-array name="info_url_array">
+        <item>http://www.ti.com/lsds/ti/dlp/advanced-light-control/wavelength-control.page</item>
+        <item>https://www.kstechnologies.com/spectroscopy</item>
+        <item>http://www.ti.com/tool/dlpnirnanoevm</item>
+        <item>http://e2e.ti.com/support/dlp__mems_micro-electro-mechanical_systems/f/983</item>
+    </string-array>
+
+    <string name="temperature">Temperature</string>
+    <string name="spatial_freq">Spatial Freq</string>
+    <string name="set_nano">Set My Nano</string>
+    <string name="clear_nano">Clear My Nano</string>
+    <string name="go">Go!</string>
+    <string name="forget">Forget</string>
+
+    <string name="title_activity_graph">Graph</string>
+
+    <string name="reflectance">Reflectance</string>
+    <string name="intensity">Intensity</string>
+    <string name="absorbance">Absorbance</string>
+
+    <string-array name="graph_tab_index">
+        <item>Reflectance</item>
+        <item>Absorbance</item>
+        <item>Intensity</item>
+    </string-array>
+
+    <string name="aspirin">aspirin</string>
+    <string name="bc">bc</string>
+    <string name="bellpepper">bellpepper</string>
+    <string name="coconutoil">coconutoil</string>
+    <string name="coffee">coffee</string>
+    <string name="corn_starch">corn_starch</string>
+    <string name="eucerin_lotion">eucerin_lotion</string>
+    <string name="flour">flour</string>
+    <string name="glucose">glucose</string>
+    <string name="out_of_spec_aspirin">out_of_spec_aspirin</string>
+
+    <string name="delete">Delete</string>
+    <string name="ok">OK</string>
+    <string name="not_connected_title">Not Connected</string>
+    <string name="not_connected_message">Ensure Bluetooth is powered on your Android device and your Nano, then tap the Scan button on the main view.</string>
+
+    <string name="battery">Battery</string>
+    <string name="humidity">Humidity</string>
+    <string name="device_status">Device Status</string>
+    <string name="error_status">Error Status</string>
+    <string name="temp_threshold">Temperature Threshold</string>
+    <string name="deg_c">deg C</string>
+    <string name="deg_f">deg F</string>
+    <string name="humid_threshold">Humidity Threshold</string>
+    <string name="relative_humid">% RH</string>
+    <string name="not_supported">Not Supported</string>
+
+    <string name="version">v%1$s (%2$d)</string>
+
+    <string-array name="configure_options">
+        <item>Device Information</item>
+        <item>Device Status</item>
+        <item>Scan Configurations</item>
+        <item>Stored Scan Data</item>
+    </string-array>
+
+    <string name="range_start_value">%1$d nm</string>
+    <string name="range_end_value">%1$d nm</string>
+    <string name="width_value">%1$d nm</string>
+    <string name="patterns_value">%1$d</string>
+    <string name="repeats_value">%1$d</string>
+
+    <string name="manufacturer">Manufacturer</string>
+    <string name="range_start">Spectral Range Start</string>
+    <string name="range_end">Spectral Range End</string>
+    <string name="width">Width</string>
+    <string name="number_patterns">Number of Patterns</string>
+    <string name="number_repeats">Number of Repeats</string>
+    <string name="serial_sn">Nano SN</string>
+
+    <string name="scan">Scan</string>
+    <string name="prefix">Filename Prefix</string>
+    <string name="data">Data</string>
+    <string name="nano">Nano</string>
+    <string name="save_to_sd">Save to SD Card?</string>
+    <string name="save_to_android">Save to Android Device?</string>
+    <string name="cont_scan">Continuous Scan?</string>
+    <string name="scan_conf">Scan Configuration</string>
+    <string name="col_1">Column 1</string>
+    <string name="hadamard">Hadamard</string>
+
+    <string name="model">Model Number</string>
+    <string name="serial">Serial Number</string>
+    <string name="hw_rev">Hardware Rev</string>
+    <string name="tiva_rev">Tiva Rev</string>
+    <string name="spectrum_rev">Spectrum Rev</string>
+
+    <string name="batt_level_value">%1$d%%</string>
+    <string name="temp_value_c">%1$s&#x2103;</string>
+    <string name="temp_value_f">%1$s&#x2109;</string>
+    <string name="humid_value">%1$s%%RH</string>
+
+    <string name="stored_configurations">Stored Configurations</string>
+    <string name="reading_configurations">Reading Scan Configurations…</string>
+    <string name="stored_scan_data">Stored Scan Data</string>
+    <string name="reading_sd_card">Reading SD Card…</string>
+
+    <string name="time_format_at">\'at\'</string>
+    <string name="new_scan">New Scan</string>
+    <string name="newScan">NewScan</string>
+    <string name="nano_disconnected">"Nano Disconnected!"</string>
+    <string name="configure">Configure</string>
+    <string name="device_information">Device Information</string>
+    <string name="file_not_found">Could not find the file!</string>
+
+    <string name="emailing">"Emailing "</string>
+    <string name="send_mail">"Send mail…"</string>
+    <string name="no_email_clients">There are no email clients installed.</string>
+    <string name="update_thresholds">Update Thresholds</string>
+    <string name="scanning">Scanning…</string>
+
+    <string name="dl_ref_cal">Downloading Ref Cal</string>
+    <string name="dl_cal_matrix">Downloading Cal Matrix</string>
+    <string name="select_nano">Select Nano</string>
+    <string name="nano_confirmation_title">Are You Sure?</string>
+    <string name="nano_confirmation_msg">Are you sure you want set the Nano with MAC address: %1$s, as your primary device?</string>
+    <string name="nano_forget_msg">Are you sure you want clear the Nano with MAC address: %1$s, as your primary device?</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_sd_scans">No Stored Scans on SD Card!</string>
+
+    <string name="desc_icon">App icon</string>
+    <string name="desc_splash">TI, DLP, and KST logo</string>
+    <string name="desc_info">Info icon</string>
+
+</resources>

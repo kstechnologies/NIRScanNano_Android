@@ -1,0 +1,212 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".NewScanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/dip8"
+        android:layout_marginStart="@dimen/dip8"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/calProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_graph_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/dip8"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/dip8">
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dip8"
+            android:background="@color/kst_red"
+            android:text="@string/scan"
+            android:textColor="@color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_scan">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_prefix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:id="@+id/tv_prefix"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/prefix"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/et_prefix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="4"
+                        android:hint="@string/nano"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_below="@id/ll_prefix"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_prefix">
+
+                    <TextView
+                        android:id="@+id/tv_saveSD"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/save_to_sd"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <ToggleButton
+                        android:id="@+id/btn_saveSD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dip40"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_below="@id/ll_sd"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_os"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_sd">
+
+                    <TextView
+                        android:id="@+id/tv_saveOS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/save_to_android"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <ToggleButton
+                        android:id="@+id/btn_saveOS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dip40"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_below="@id/ll_os"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_continuous"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip40"
+                    android:layout_below="@id/ll_os">
+
+                    <TextView
+                        android:id="@+id/tv_continuous"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cont_scan"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <ToggleButton
+                        android:id="@+id/btn_continuous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dip40"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_below="@id/ll_continuous"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_conf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_continuous"
+                    android:gravity="center"
+                    android:minHeight="@dimen/dip40">
+
+                    <TextView
+                        android:id="@+id/tv_conf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/scan_conf"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_scan_conf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/col_1"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_below="@id/ll_conf"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>
