@@ -12,7 +12,7 @@
         jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="6cad10afb9b62bec62962e9553ef808467ff705f">
+        sha1="e70fe42e786f697d2285b105ec8a00e44d6890a1">
         <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_94271aef635032b41609a463c61cab635c305694/classes.dex" />
     </item>
     <item
@@ -26,7 +26,7 @@
         jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/exploded-aar/nirscannanolibrary/jars/classes.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="52dd943c1b17caf5fcd68a1ee428dfd1eaa7c797">
+        sha1="de3935879670881c0bd40cb4c3d5bd3f393290b1">
         <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-nirscannanolibrary_58d8e1cce01d700fd3769a2a50992dc49e323dca/classes.dex" />
     </item>
     <item
@@ -54,7 +54,7 @@
         jar="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="f62cebfe7e1a0b8229df5b429d2da35db1c6d7c7">
+        sha1="978242deb9aad0c04487f62423bc61ae397493eb">
         <dex dex="/Users/collinmast/NIRScanNano_Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1b51bf0b99cfc677b8bb15858c970b1dd68b5034/classes.dex" />
     </item>
 

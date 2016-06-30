@@ -26,6 +26,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,6 +35,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -126,6 +128,8 @@ public class NewScanActivity extends Activity {
     private AlertDialog alertDialog;
     private TextView tv_scan_conf;
     private String preferredDevice;
+    private LinearLayout ll_conf;
+    private KSTNanoSDK.ScanConfiguration activeConf;
 
     private Menu mMenu;
 
@@ -139,6 +143,19 @@ public class NewScanActivity extends Activity {
         calProgress = (ProgressBar) findViewById(R.id.calProgress);
         calProgress.setVisibility(View.VISIBLE);
         connected = false;
+
+        ll_conf = (LinearLayout)findViewById(R.id.ll_conf);
+        ll_conf.setClickable(false);
+        ll_conf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(activeConf != null) {
+                    Intent activeConfIntent = new Intent(mContext, ActiveScanActivity.class);
+                    activeConfIntent.putExtra("conf",activeConf);
+                    startActivity(activeConfIntent);
+                }
+            }
+        });
 
         //Set the filename from the intent
         Intent intent = getIntent();
@@ -1003,9 +1020,11 @@ public class NewScanActivity extends Activity {
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    mBluetoothLeScanner.stopScan(mLeScanCallback);
-                    if (!connected) {
-                        notConnectedDialog();
+                    if(mBluetoothLeScanner != null) {
+                        mBluetoothLeScanner.stopScan(mLeScanCallback);
+                        if (!connected) {
+                            notConnectedDialog();
+                        }
                     }
                 }
             }, NanoBLEService.SCAN_PERIOD);
@@ -1135,7 +1154,18 @@ public class NewScanActivity extends Activity {
         @Override
         public void onReceive(Context context, Intent intent) {
 
+            byte[] smallArray = intent.getByteArrayExtra(KSTNanoSDK.EXTRA_DATA);
+            byte[] addArray = new byte[smallArray.length * 3];
+            byte[] largeArray = new byte[smallArray.length + addArray.length];
+
+            System.arraycopy(smallArray, 0, largeArray, 0, smallArray.length);
+            System.arraycopy(addArray, 0, largeArray, smallArray.length, addArray.length);
+
+            Log.w("_JNI","largeArray Size: "+ largeArray.length);
             KSTNanoSDK.ScanConfiguration scanConf = KSTNanoSDK.KSTNanoSDK_dlpSpecScanReadConfiguration(intent.getByteArrayExtra(KSTNanoSDK.EXTRA_DATA));
+            //KSTNanoSDK.ScanConfiguration scanConf = KSTNanoSDK.KSTNanoSDK_dlpSpecScanReadConfiguration(largeArray);
+
+            activeConf = scanConf;
 
             barProgressDialog.dismiss();
             btn_scan.setClickable(true);
@@ -1144,6 +1174,8 @@ public class NewScanActivity extends Activity {
 
             SettingsManager.storeStringPref(mContext, SettingsManager.SharedPreferencesKeys.scanConfiguration, scanConf.getConfigName());
             tv_scan_conf.setText(scanConf.getConfigName());
+
+
         }
     }
     /**

@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 
 import android.widget.ListView;
 
+import com.kstechnologies.nirscannanolibrary.*;
 import com.kstechnologies.nirscannanolibrary.KSTNanoSDK;
 
 /**

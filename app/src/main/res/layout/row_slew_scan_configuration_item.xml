@@ -12,15 +12,15 @@
         android:paddingTop="@dimen/dip8"
         android:textAppearance="?android:textAppearanceLarge"
         android:textStyle="bold"
-        tools:text="Column 1" />
+        tools:text="Column 1"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/ll_range_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_scan_type"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_range_start"
@@ -45,8 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_range_start"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_range_end"
@@ -71,8 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_range_end"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_patterns"
@@ -97,8 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_patterns"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_width"
