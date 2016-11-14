@@ -127,6 +127,8 @@ public class NanoBLEService extends Service {
     private static BroadcastReceiver mUpdateThresholdReceiver;
     private static BroadcastReceiver mRequestActiveConfReceiver;
 
+    public static final String ACTION_SCAN_STARTED = "com.kstechnologies.NanoScan.bluetooth.service.ACTION_SCAN_STARTED";
+
     //Initialize the current scan index to a four-byte zero array
     private byte scanIndex[] = {0x00, 0x00, 0x00, 0x00};
 
@@ -444,6 +446,14 @@ public class NanoBLEService extends Service {
                 Log.d(TAG, "onCharacteristic changed for characteristic:" + characteristic.getUuid().toString());
 
             if (characteristic == KSTNanoSDK.NanoGattCharacteristic.mBleGattCharGSDISStartScanNotify) {
+                Intent scanStartedIntent = new Intent(ACTION_SCAN_STARTED);
+                LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(scanStartedIntent);
+                scanData.reset();
+                refConf.reset();
+                refMatrix.reset();
+                size = 0;
+                refSize = 0;
+                refMatrixSize = 0;
                 final byte[] data = characteristic.getValue();
                 if (data[0] == (byte) 0xff) {
                     if (debug)
@@ -622,14 +632,14 @@ public class NanoBLEService extends Service {
                 }
 
                 if (scanConfIndex == scanConfIndexSize && scanConfIndexSize != 1) {
-                        scanConfIndex = 1;
-                        byte[] confIndex = {0, 0};
-                        confIndex[0] = scanConfList.get(scanConfIndex)[1];
-                        confIndex[1] = scanConfList.get(scanConfIndex)[2];
+                    scanConfIndex = 1;
+                    byte[] confIndex = {0, 0};
+                    confIndex[0] = scanConfList.get(scanConfIndex)[1];
+                    confIndex[1] = scanConfList.get(scanConfIndex)[2];
 
-                        if (debug)
-                            Log.d(TAG, "Writing request for scan conf at index:" + confIndex[0] + "-" + confIndex[1]);
-                        KSTNanoSDK.requestScanConfiguration(confIndex);
+                    if (debug)
+                        Log.d(TAG, "Writing request for scan conf at index:" + confIndex[0] + "-" + confIndex[1]);
+                    KSTNanoSDK.requestScanConfiguration(confIndex);
                 }
             } else if (characteristic == KSTNanoSDK.NanoGattCharacteristic.mBleGattCharGSDISSDStoredScanIndicesListData) {
                 final byte[] data = characteristic.getValue();

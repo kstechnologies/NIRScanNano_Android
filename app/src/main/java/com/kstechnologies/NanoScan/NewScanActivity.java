@@ -97,6 +97,7 @@ public class NewScanActivity extends Activity {
     private final BroadcastReceiver scanDataReadyReceiver = new scanDataReadyReceiver();
     private final BroadcastReceiver refReadyReceiver = new refReadyReceiver();
     private final BroadcastReceiver notifyCompleteReceiver = new notifyCompleteReceiver();
+    private final BroadcastReceiver scanStartedReceiver = new ScanStartedReceiver();
     private final BroadcastReceiver requestCalCoeffReceiver = new requestCalCoeffReceiver();
     private final BroadcastReceiver requestCalMatrixReceiver = new requestCalMatrixReceiver();
     private final BroadcastReceiver disconnReceiver = new DisconnReceiver();
@@ -107,6 +108,7 @@ public class NewScanActivity extends Activity {
     private final IntentFilter requestCalCoeffFilter = new IntentFilter(KSTNanoSDK.ACTION_REQ_CAL_COEFF);
     private final IntentFilter requestCalMatrixFilter = new IntentFilter(KSTNanoSDK.ACTION_REQ_CAL_MATRIX);
     private final IntentFilter disconnFilter = new IntentFilter(KSTNanoSDK.ACTION_GATT_DISCONNECTED);
+    private final IntentFilter scanStartedFilter = new IntentFilter(NanoBLEService.ACTION_SCAN_STARTED);
 
     private final BroadcastReceiver scanConfReceiver = new ScanConfReceiver();
     private final IntentFilter scanConfFilter = new IntentFilter(KSTNanoSDK.SCAN_CONF_DATA);
@@ -242,6 +244,7 @@ public class NewScanActivity extends Activity {
         LocalBroadcastManager.getInstance(mContext).registerReceiver(requestCalMatrixReceiver, requestCalMatrixFilter);
         LocalBroadcastManager.getInstance(mContext).registerReceiver(disconnReceiver, disconnFilter);
         LocalBroadcastManager.getInstance(mContext).registerReceiver(scanConfReceiver, scanConfFilter);
+        LocalBroadcastManager.getInstance(mContext).registerReceiver(scanStartedReceiver, scanStartedFilter);
     }
 
     @Override
@@ -815,6 +818,17 @@ public class NewScanActivity extends Activity {
             refCal.add(new KSTNanoSDK.ReferenceCalibration(refCoeff, refMatrix));
             KSTNanoSDK.ReferenceCalibration.writeRefCalFile(mContext, refCal);
             calProgress.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * Custom receiver for returning the event that a scan has been initiated from the button
+     */
+    public class ScanStartedReceiver extends BroadcastReceiver {
+
+        public void onReceive(Context context, Intent intent) {
+            calProgress.setVisibility(View.VISIBLE);
+            btn_scan.setText(getString(R.string.scanning));
         }
     }
 

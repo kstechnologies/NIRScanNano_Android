@@ -10,7 +10,7 @@ android {
         applicationId "com.kstechnologies.NanoScan"
         minSdkVersion 21
         targetSdkVersion 22
-        versionCode 11
+        versionCode 13
         versionName "1.0"
     }
     buildTypes {
